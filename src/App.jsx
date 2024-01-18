@@ -78,6 +78,7 @@ function App() {
         <Route path="/error" element={ <PageError/>}/>
         <Route path="/thankyou" element={ <PageThankyou/>}/>
       </Routes> : 
+      <>
       <div className={`page-wrapper  ${toggle ? "toggled" : ""}`}>
         {location.pathname === '/index-sidebar-light' ? <SidebarLight/> : location.pathname === '/index-sidebar-colored' ? <SidebarColored/> : location.pathname === '/email-confirmation' ? "" : <Sidebar />}
           <main className="page-content bg-gray-50 dark:bg-slate-800">
@@ -125,6 +126,18 @@ function App() {
           </main>
           <Switcher/>
       </div>
+
+      <div className={`page-wrapper  ${toggle ? "toggled" : ""}`}>
+      {location.pathname === '/inicio' ?  <Sidebar /> : '' }
+        <main className="page-content bg-gray-50 dark:bg-slate-800">
+            <Topnav toggle={toggle} setToggle={setToggle}/>
+            <Routes>
+              {/* <Route exact path="/" element={<Index/>}/>               */}
+            </Routes>
+            <Footer/>
+        </main>
+    </div>
+    </>
       }
     </>
     
