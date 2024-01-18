@@ -55,6 +55,8 @@ import PageError from "./pages/Miscellaneous/error";
 import PageThankyou from "./pages/Miscellaneous/thankyou";
 import IndexCrypto from "./pages/index-crypto";
 
+import Dashboard from "./pages/Ekored/dashboard";
+
 
 function App() {
   const[toggle, setToggle] = useState(true)
@@ -124,7 +126,7 @@ function App() {
               </Routes>
               <Footer/>
           </main>
-          <Switcher/>
+          {/* <Switcher/> */}
       </div>
 
       <div className={`page-wrapper  ${toggle ? "toggled" : ""}`}>
@@ -132,7 +134,7 @@ function App() {
         <main className="page-content bg-gray-50 dark:bg-slate-800">
             <Topnav toggle={toggle} setToggle={setToggle}/>
             <Routes>
-              {/* <Route exact path="/" element={<Index/>}/>               */}
+              <Route exact path="/inicio" element={<Dashboard/>}/>              
             </Routes>
             <Footer/>
         </main>

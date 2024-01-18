@@ -63,14 +63,6 @@ export default function Topnav({setToggle, toggle}){
             <div className="top-header">
                 <div className="header-bar flex justify-between">
                     <div className="flex items-center space-x-1">
-                        <Link to="#" className="xl:hidden block me-2">
-                            <img src={smallLogo} className="md:hidden block" alt=""/>
-                            <span className="md:block hidden">
-                                <img src={logoDark} className="inline-block dark:hidden" alt=""/>
-                                <img src={logoLight} className="hidden dark:inline-block" alt=""/>
-                            </span>
-                        </Link>
-
                         <Link id="close-sidebar" className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-full" href="#">
                             <Icon.Menu  className="h-4 w-4" onClick={toggleHandler}/>
                         </Link>
@@ -102,73 +94,6 @@ export default function Topnav({setToggle, toggle}){
                                     <li className="my-1">
                                         <Link to="" className="flex items-center text-[15px] font-semibold py-1.5 px-4 dark:text-white/70 hover:text-indigo-600 dark:hover:text-white"><img src={spainFlag} className="h-6 w-6 rounded-full me-2 shadow dark:shadow-gray-700" alt=""/> Spanish</Link>
                                     </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li className="dropdown inline-block relative">
-                            <button onClick = {()=> setCart(!cart)} className="dropdown-toggle h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-full" type="button">
-                                <Icon.ShoppingCart className="h-4 w-4"/>
-                                <span className="absolute top-0 end-0 flex items-center justify-center bg-emerald-600 text-white text-[10px] font-bold rounded-full w-2 h-2 after:content-[''] after:absolute after:h-2 after:w-2 after:bg-emerald-600 after:top-0 after:end-0 after:rounded-full after:animate-ping"></span>
-                            </button>
-                        
-                            <div className={`dropdown-menu absolute end-0 m-0 mt-4 z-10 w-60 rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-700  ${cart ? "" : 'hidden'}`}>
-                                <ul className="py-3 text-start">
-                                    <li>
-                                        <Link to="#" className="flex items-center justify-between py-1.5 px-4">
-                                            <span className="flex items-center">
-                                                <img src={shopItem1} className="rounded shadow dark:shadow-gray-700 w-9" alt=""/>
-                                                <span className="ms-3">
-                                                    <span className="block font-semibold">T-shirt (M)</span>
-                                                    <span className="block text-sm text-slate-400">$320 X 2</span>
-                                                </span>
-                                            </span>
-
-                                            <span className="font-semibold">$640</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link to="#" className="flex items-center justify-between py-1.5 px-4">
-                                            <span className="flex items-center">
-                                                <img src={shopItem2} className="rounded shadow dark:shadow-gray-700 w-9" alt=""/>
-                                                <span className="ms-3">
-                                                    <span className="block font-semibold">Bag</span>
-                                                    <span className="block text-sm text-slate-400">$50 X 5</span>
-                                                </span>
-                                            </span>
-
-                                            <span className="font-semibold">$250</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link to="#" className="flex items-center justify-between py-1.5 px-4">
-                                            <span className="flex items-center">
-                                                <img src={shopItem3} className="rounded shadow dark:shadow-gray-700 w-9" alt=""/>
-                                                <span className="ms-3">
-                                                    <span className="block font-semibold">Watch (Men)</span>
-                                                    <span className="block text-sm text-slate-400">$800 X 1</span>
-                                                </span>
-                                            </span>
-
-                                            <span className="font-semibold">$800</span>
-                                        </Link>
-                                    </li>
-
-                                    <li className="border-t border-gray-100 dark:border-gray-800 my-2"></li>
-
-                                    <li className="flex items-center justify-between py-1.5 px-4">
-                                        <h6 className="font-semibold mb-0">Total($):</h6>
-                                        <h6 className="font-semibold mb-0">$1690</h6>
-                                    </li>
-
-                                    <li className="py-1.5 px-4 space-x-1">
-                                        <Link to="#" className="py-[5px] px-4 inline-block font-semibold tracking-wide align-middle duration-500 text-sm text-center rounded-md bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white">View Cart</Link>
-                                        <Link to="#" className="py-[5px] px-4 inline-block font-semibold tracking-wide align-middle duration-500 text-sm text-center rounded-md bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white">Checkout</Link>
-                                        <p className="text-sm text-slate-400 mt-1">*T&C Apply</p>
-                                    </li>
-            
                                 </ul>
                             </div>
                         </li>
