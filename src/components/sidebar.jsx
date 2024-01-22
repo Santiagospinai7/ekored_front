@@ -28,30 +28,29 @@ export default function Sidebar(){
         <nav className="sidebar-wrapper sidebar-dark">
             <div className=" sidebar-content">
                 <div className="sidebar-brand">
-                    <Link to="/index"><img src={LogoLight} height="24" alt=""/></Link>
+                    {/* <Link to="/index"><img src={LogoLight} height="24" alt=""/></Link> */}
+                    <h1>Ekored</h1>
                 </div>
             <SimpleBarReact style={{height:"calc(100% - 70px)"}}> 
                 <ul className="sidebar-menu border-t border-white/10">
                     <li className={`sidebar-dropdown ${["" ,"index","index-crypto",].includes(manu)? "active" : ""}`}>
-                            <Link to="#" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Dashboard</Link>
+                            <Link to="#" className="text-gray-400" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Dashboard</Link>
                         </li>
                     <li className={`sidebar-dropdown ${["" ,"index","index-crypto",].includes(manu)? "active" : ""}`}>
-                        <Link to="#" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Recepciones</Link>
+                        <Link to="#" className="text-gray-400" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Recepciones</Link>
                     </li>
                     <li className={`sidebar-dropdown ${["" ,"index","index-crypto",].includes(manu)? "active" : ""}`}>
-                        <Link to="#" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Selección</Link>
+                        <Link to="#" className="text-gray-400" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Selección</Link>
                     </li>
                     <li className={`sidebar-dropdown ${["" ,"index","index-crypto",].includes(manu)? "active" : ""}`}>
-                        <Link to="#" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Compactación</Link>
+                        <Link to="#" className="text-gray-400" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Compactación</Link>
                     </li>
                     <li className={`sidebar-dropdown ${["" ,"index","index-crypto",].includes(manu)? "active" : ""}`}>
-                        <Link to="#" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Despacho</Link>
+                        <Link to="#" className="text-gray-400" onClick={(e)=>{setSubManu(subManu === "dashboard-item" ? "" : "dashboard-item")}}><AiOutlineLineChart className=" me-3 icon "/>Despacho</Link>
                     </li>
-                        
                 </ul>
             </SimpleBarReact>
             </div>
         </nav>
-        
     )
 }
