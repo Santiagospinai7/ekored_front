@@ -86,59 +86,12 @@ function App() {
           <main className="page-content bg-gray-50 dark:bg-slate-800">
               <Topnav toggle={toggle} setToggle={setToggle}/>
               <Routes>
-                <Route exact path="/" element={<Index/>}/>
-                <Route path="/index" element={<Index/>}/>
-                <Route path="/index-crypto" element={<IndexCrypto/>}/>
-                <Route path="/index-dark" element={<IndexDark/>}/>
-                <Route path="/index-rtl" element={<IndexRtl/>}/>
-                <Route path="/index-dark-rtl" element={<IndexDarkRtl/>}/>
-                <Route path="/index-sidebar-light" element={<IndexSidebarLight/>}/>
-                <Route path="/index-sidebar-colored" element={<IndexSidebarColored/>}/>
-                <Route path="/chat" element={<Chat/>}/>
-                <Route path="/email" element={<Email/>}/>
-                <Route path="/calendar" element={<Calendar/>}/>
-                <Route path="/profile" element={<Profile/>}/>
-                <Route path="/profile-billing" element={<ProfileBilling/>}/>
-                <Route path="/profile-payment" element={<ProfilePayments/>}/>
-                <Route path="/profile-social" element={<ProfileSocial/>}/>
-                <Route path="/profile-notification" element={<ProfileNotification/>}/>
-                <Route path="/profile-setting" element={<ProfileSetting/>}/>
-                <Route path="/blog" element={<Blogs/>}/>
-                <Route path="/blog-detail" element={<BlogDetails/>}/>
-                <Route path="/blog-detail/:id" element={<BlogDetails/>}/>
-                <Route path="/shop" element={<Shop/>}/>
-                <Route path="/shop-item-detail" element={<ShopItemDetails/>}/>
-                <Route path="/shop-item-detail/:id" element={<ShopItemDetails/>}/>
-                <Route path="/shop-cart" element={<ShopCart/>}/>
-                <Route path="/checkout" element={<Checkout/>}/>
-                <Route path="/gallery-one" element={<GalleryOne/>}/>
-                <Route path="/gallery-two" element={<Gallerytwo/>}/>
-                <Route path="/starter" element={<Starter/>}/>
-                <Route path="/faqs" element={<Faqs/>}/>
-                <Route path="/pricing" element={<Pricing/>}/>
-                <Route path="/team" element={<Team/>}/>
-                <Route path="/privacy" element={<Privacy/>}/>
-                <Route path="/terms" element={<Terms/>}/>
-                <Route path="/ui-components" element={<UiComponents/>}/>
-                <Route path="/invoice-list" element={<InvoiceList/>}/>
-                <Route path="/invoice" element={<InvoicePrivew/>}/>
-                
+                <Route exact path="/inicio" element={<Dashboard/>}/> 
               </Routes>
               <Footer/>
           </main>
           {/* <Switcher/> */}
       </div>
-
-      <div className={`page-wrapper  ${toggle ? "toggled" : ""}`}>
-      {location.pathname === '/inicio' ?  <Sidebar /> : '' }
-        <main className="page-content bg-gray-50 dark:bg-slate-800">
-            <Topnav toggle={toggle} setToggle={setToggle}/>
-            <Routes>
-              <Route exact path="/inicio" element={<Dashboard/>}/>              
-            </Routes>
-            <Footer/>
-        </main>
-    </div>
     </>
       }
     </>
