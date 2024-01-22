@@ -49,7 +49,6 @@ export default function Topnav({ setToggle, toggle }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen">
         <div className="top-header">
           <div className="header-bar flex justify-between">
             <div className="flex items-center space-x-1">
@@ -196,7 +195,6 @@ export default function Topnav({ setToggle, toggle }) {
             </ul>
           </div>
         </div>
-      </div>
     </>
   );
 }
