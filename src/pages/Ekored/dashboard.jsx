@@ -36,7 +36,7 @@ export default function Dashboard(){
       <div className="layout-specing">
         <div className="flex justify-between items-center top-0">
           <div>
-            <h5 className="text-xl font-bold">Hola, Juan</h5>
+            <h5 className="text-xl font-bold">Hola, Marta</h5>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 top-5">
