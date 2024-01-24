@@ -17,5 +17,5 @@ export default function CardMenu({ title, image }) {
         </div>
       </div>
     </>
-  );
+  )
 }
