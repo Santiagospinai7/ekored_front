@@ -1,49 +1,14 @@
 import {useState} from 'react'
-import { Route, Routes, useLocation} from 'react-router-dom'
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom'
 
 import Sidebar from './components/sidebar'
-import SidebarLight from './components/sidebarLight'
-// import Switcher from './components/switcher'
 import Topnav from './components/topnav'
 import Footer from './components/footer'
-import SidebarColored from './components/sidebarColored'
 
-// import Index from './pages/index'
-// import IndexDark from './pages/Layouts/index-dark'
-// import IndexRtl from './pages/Layouts/index-rtl'
-// import IndexDarkRtl from './pages/Layouts/index-dark-rtl'
-// import IndexSidebarLight from './pages/Layouts/index-sidebar-light'
-// import IndexSidebarColored from './pages/Layouts/index-sidebar-colored'
-// import Chat from './pages/Apps/chat'
-// import Email from './pages/Apps/email'
-// import Calendar from './pages/Apps/calendar'
-// import Profile from './pages/User-Profile/profile'
-// import ProfileBilling from './pages/User-Profile/profile-billing'
-// import ProfilePayments from './pages/User-Profile/profile-payment'
-// import ProfileSocial from './pages/User-Profile/profile-social'
-// import ProfileNotification from './pages/User-Profile/profile-notification'
-// import ProfileSetting from './pages/User-Profile/profile-setting'
-// import Blogs from './pages/Blog/blogs'
-// import BlogDetails from './pages/Blog/blog-detail'
-// import Shop from './pages/Ecommerce/shop'
-// import ShopItemDetails from './pages/Ecommerce/shop-item-detail'
-// import ShopCart from './pages/Ecommerce/shop-cart'
-// import Checkout from './pages/Ecommerce/checkout'
-// import GalleryOne from './pages/Gallery/gallery-one'
-// import Gallerytwo from './pages/Gallery/gallery-two'
-// import Starter from './pages/pages/starter'
-// import Faqs from './pages/pages/faqs'
-// import Pricing from './pages/pages/pricing'
-// import Team from './pages/pages/team'
-// import Privacy from './pages/pages/privacy'
-// import Terms from './pages/pages/terms'
-// import UiComponents from './pages/ui-components'
 import EmailConfirmation from './pages/Email-template/email-confirmation'
 import PasswordReset from './pages/Email-template/email-password-reset'
 import EmailAlert from './pages/Email-template/email-alert'
 import EmailInvoice from './pages/Email-template/email-invoices'
-// import InvoiceList from './pages/invoice/invoice-list'
-// import InvoicePrivew from './pages/invoice/invoice'
 import AuthLogin from './pages/Authentication/auth-login'
 import Signup from './pages/Authentication/auth-signup'
 import AuthSignupSuccess from './pages/Authentication/auth-signup-success'
@@ -53,7 +18,6 @@ import Comingsoon from './pages/Miscellaneous/comingsoon'
 import Maintenance from './pages/Miscellaneous/maintenance'
 import PageError from './pages/Miscellaneous/error'
 import PageThankyou from './pages/Miscellaneous/thankyou'
-// import IndexCrypto from './pages/index-crypto'
 
 import Dashboard from './pages/Ekored/dashboard'
 
@@ -82,15 +46,16 @@ function App() {
         </Routes> : 
         <>
           <div className={`page-wrapper  ${toggle ? 'toggled' : ''}`}>
-            {location.pathname === '/index-sidebar-light' ? <SidebarLight/> : location.pathname === '/index-sidebar-colored' ? <SidebarColored/> : location.pathname === '/email-confirmation' ? '' : <Sidebar />}
+            {/* {location.pathname === '/index-sidebar-light' ? <SidebarLight/> : location.pathname === '/index-sidebar-colored' ? <SidebarColored/> : location.pathname === '/email-confirmation' ? '' : <Sidebar />} */}
+            <Sidebar />
             <main className="page-content bg-gray-50 dark:bg-slate-800">
               <Topnav toggle={toggle} setToggle={setToggle}/>
               <Routes>
+                <Route path='/' element={<Navigate to='/inicio' />} />
                 <Route exact path="/inicio" element={<Dashboard/>}/> 
               </Routes>
               <Footer/>
             </main>
-            {/* <Switcher/> */}
           </div>
         </>
       }

@@ -1,7 +1,6 @@
 export default function CardMenu({ title, image }) {
   return (
     <>
-      {/* card that has the image in the top center and title in the bottom center */}
       <div className="shadow bg-white dark:bg-slate-900 px-6 py-4">
         <div className="container-fluid">
           <div className="grid grid-cols-1">
