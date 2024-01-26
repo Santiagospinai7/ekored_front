@@ -13,22 +13,18 @@ import germanyFlag from '../assets/images/flags/germany.png'
 import italyFlag from '../assets/images/flags/italy.png'
 import russiaFlag from '../assets/images/flags/russia.png'
 import spainFlag from '../assets/images/flags/spain.png'
-// import shopItem1 from '../assets/images/shop/items/s1.jpg'
-// import shopItem2 from '../assets/images/shop/items/s2.jpg'
-// import shopItem3 from '../assets/images/shop/items/s3.jpg'
 import client1 from '../assets/images/client/01.jpg'
 import client2 from '../assets/images/client/02.jpg'
 import client5 from '../assets/images/client/05.jpg'
 
 export default function Topnav({ setToggle, toggle }) {
   let [country, setCountry] = useState(false)
-  // let [cart, setCart] = useState(false)
   let [notification, setNotification] = useState(false)
   let [user, setUser] = useState(false)
 
   useEffect(() => {
+    console.log('useEffect')
     let countries = () => setCountry(false)
-    // let shopingCart = () => setCart(false)
     let notificationToggle = () => setNotification(false)
     let userData = () => setUser(false)
 
@@ -86,7 +82,7 @@ export default function Topnav({ setToggle, toggle }) {
 
             <li className="dropdown inline-block relative">
               <button onClick={()=>setNotification(!notification)} className="dropdown-toggle h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-[20px] text-center bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-100 dark:border-gray-800 text-slate-900 dark:text-white rounded-full" type="button">
-                <Icon.Bell className="h-4 w-4"/>
+                <Icon.Bell className="h-4 w-4 navbar-icon"/>
                 <span className="absolute top-0 end-0 flex items-center justify-center bg-red-600 text-white text-[10px] font-bold rounded-full w-2 h-2 after:content-[''] after:absolute after:h-2 after:w-2 after:bg-red-600 after:top-0 after:end-0 after:rounded-full after:animate-ping"></span>
               </button>
                         
@@ -187,7 +183,8 @@ export default function Topnav({ setToggle, toggle }) {
                     <Link to="/lock-screen" className="flex items-center font-medium py-1 px-4 dark:text-white/70 hover:text-indigo-600 dark:hover:text-white"><BiLockAlt className="me-2"/>Lockscreen</Link>
                   </li>
                   <li>
-                    <Link to="/login" className="flex items-center font-medium py-1 px-4 dark:text-white/70 hover:text-indigo-600 dark:hover:text-white"><IoMdLogOut className="me-2"/>Logout</Link>
+                    <a href="#" className="flex items-center font-medium py-1 px-4 dark:text-white/70 hover:text-indigo-600 dark:hover:text-white" onClick={()=>{console.log('logout click it!')}}>Log out</a>
+                    {/* <Link to="/login" className="flex items-center font-medium py-1 px-4 dark:text-white/70 hover:text-indigo-600 dark:hover:text-white"><IoMdLogOut className="me-2"/>Logout</Link> */}
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,23 @@
+:root {
+  --ekored_green: #04A54F;
+  --ekored_green_light: #E1FFB9;
+}
+
+.sidebar-logo {
+  /* reduce size and center items */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.navbar-icon {
+  color: var(--ekored_green) !important;
+}
+
+.dashboard-button {
+  background-color: var(--ekored_green) !important;
+  color: white !important;
+  padding: 0.2rem;
+}
